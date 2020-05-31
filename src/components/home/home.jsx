@@ -38,11 +38,11 @@ const Home = () => {
             <Avatar className={classes.avatar} src={avatar} alt="Eduardo Juarez"/> 
         </Grid>
         <Typography variant="h4" className={classes.title}>
-            <Typed strings={["Eduardo Juarez"]} typeSpeed="40"/>
+            <Typed strings={["Eduardo Juarez"]} typeSpeed={40}/>
         </Typography>
         <br />
         <Typography  className={classes.subtitle} variant="h5">
-            <Typed strings={["Web Developer", "React","JavaScipt"]} typeSpeed="60" backSpeed="60" loop/>
+            <Typed strings={["Web Developer", "React","JavaScript"]} typeSpeed={40} backSpeed={80} loop/>
         </Typography>
     </Box>
 )
