@@ -6,7 +6,7 @@ import avatar from '../images/avatar.png'
 import MovilMenu from '@material-ui/core/Drawer'
 
 //css Styles
-const useStyles = makeStyles (theme=>({
+const useStyles = makeStyles (theme => ({
     menuSlider: { 
         width: 250,
         background: 'wheet',
@@ -53,7 +53,7 @@ const Menu = () => {
     const classes = useStyles()
 
     const sideList = slider => (
-        <Box className={classes.menuSlider} component="div">
+        <Box className={classes.menuSlider} component="div" onClick={toggleSlider(slider, false)}>
                 <Avatar className={classes.avatar}src={avatar} alt="Eduardo Juarez"/>
                 <Divider/>
                 <List>
@@ -69,21 +69,19 @@ const Menu = () => {
                     ))}
                 </List>
             </Box>
-
-    )
+    );
     return(
         <>
-            
             <Box component="nav">
                 <AppBar position='static' style={{background: "lightblue"}}>
                     <Toolbar>
-                        <IconButton onClick={toggleSlider("rigth", true)}>
+                        <IconButton onClick={toggleSlider("right", true)}>
                             <ArrowBack style={{color: "tomato"}} /> 
                         </IconButton>
                         <Typography style= {{color:"black"}} variant='h5'>
-                            Portfolio
+                            Eduardo Juarez
                         </Typography>
-                        <MovilMenu anchor="right" open={state.right }>
+                        <MovilMenu anchor="left" open={state.right} onClose={toggleSlider("right", false)}>
                             {sideList("right")}
                         </MovilMenu>
                     </Toolbar>
