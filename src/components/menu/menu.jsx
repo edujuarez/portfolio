@@ -1,8 +1,9 @@
 import React, { useState} from 'react'
 import { AppBar, Toolbar, ListItem, ListItemIcon, IconButton, ListItemText, Avatar, Divider, List, Typography, Box } from '@material-ui/core'
-import { ArrowBack, AssignmentInd, Home, Apps, ContactMail  } from '@material-ui/icons'
+import { AssignmentInd, Home, Apps, ContactMail  } from '@material-ui/icons'
+import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles'
-import avatar from '../images/avatar.png'
+import avatar from '../../images/avatar.png'
 import MovilMenu from '@material-ui/core/Drawer'
 
 //css Styles
@@ -76,7 +77,7 @@ const Menu = () => {
                 <AppBar position='static' style={{background: "lightblue"}}>
                     <Toolbar>
                         <IconButton onClick={toggleSlider("right", true)}>
-                            <ArrowBack style={{color: "tomato"}} /> 
+                            <MenuIcon style={{color: "purple"}} /> 
                         </IconButton>
                         <Typography style= {{color:"black"}} variant='h5'>
                             Eduardo Juarez

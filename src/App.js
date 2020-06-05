@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Home, Menu } from './components'
-import { CssBaseline } from '@material-ui/core';
+import { Home, Menu, Portfolio } from './components'
+import { CssBaseline } from '@material-ui/core'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <CssBaseline>
         <Menu/>
         <Home/>
+        <Portfolio />
       </CssBaseline>
       
     </>
