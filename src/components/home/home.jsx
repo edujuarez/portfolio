@@ -42,7 +42,7 @@ const Home = () => {
         </Typography>
         <br />
         <Typography  className={classes.subtitle} variant="h5">
-            <Typed strings={["Web Developer", "React","JavaScript"]} typeSpeed={40} backSpeed={80} loop/>
+            <Typed strings={["React Developer", "Frontend","JavaScript"]} typeSpeed={40} backSpeed={80} loop/>
         </Typography>
     </Box>
 )
