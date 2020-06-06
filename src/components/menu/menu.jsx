@@ -88,7 +88,6 @@ const Menu = () => {
                             {sideList("right")}
                             <Footer/>
                         </MovilMenu>
-                        <Footer/>
                     </Toolbar>
                 </AppBar>
             </Box>
