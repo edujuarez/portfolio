@@ -5,77 +5,100 @@ import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button } fro
 import tetrisMiniatura  from '../../images/tetrisMiniatura.png'
 import covidMiniatura  from '../../images/covidMiniatura.png'
 import searchMiniatura  from '../../images/searchMiniatura.png'
+import portfMiniatura  from '../../images/portfMiniatura.png'
 
-const useStyles = makeStyles (theme => ({
-    container: {
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-around",
-        alignItems: "center"
-        
-    },
-    card: {
-        maxWidth: 345,
-    }
-}))
+
+
 const portfList = [
     {
         imagePreview: tetrisMiniatura,
         nameProyect: "Tetris in JS",
-        descriptionProyect: "Tetris game with vanilla JavaScript and CSS"
+        descriptionProyect: "Tetris game in vanilla JavaScript and CSS.",
+        btnLive:"http://tetris-js.surge.sh/",
+        btnCode:"https://github.com/edujuarez/js-tetris"
     },
     {
         imagePreview: covidMiniatura,
         nameProyect: "Corona tracker",
-        descriptionProyect: "Corona virus worldwide tracker updated daily with API"
+        descriptionProyect: "Coronavirus tracker in React. Updated daily.",
+        btnLive:"http://jsoft-corona-app.surge.sh/",
+        btnCode:"https://github.com/edujuarez/corona-tracker"
     },
     {
         imagePreview: searchMiniatura,
         nameProyect: "Movie Searcher",
-        descriptionProyect: "Movie searcher with IMDb API"
+        descriptionProyect: "Movie searcher in React with IMDb API.",
+        btnLive:"http://eduk-search-movies.surge.sh/",
+        btnCode:"https://github.com/edujuarez/search-movie-react"
+    },
+    {
+        imagePreview: portfMiniatura,
+        nameProyect: "This Portfolio",
+        descriptionProyect: "My own portfolio made in React.",
+        btnLive:"",
+        btnCode:"https://github.com/edujuarez/portfolio"
     }
 ]
+const useStyles = makeStyles (theme => ({
+    mainContainer: {
+        background: "lightblue",
+        height: "50%",
+        width: "80%",
+        margin: "0 auto",
+        alignContent:"center",
+        display: "block"
+        
+    },
+    cardContainer: {
+        maxWidth: 347,
+        margin: "5rem auto",
+
+    },
+}))
+
+
 const Portfolio = () => {
 const classes = useStyles()
-    return (
-        <>
-        <Box >
-               <Typography variant="h4">Portfolio</Typography>
+    return (<>               
+    <Typography variant="h4" align="center" margin="25px">Portfolio</Typography>
                <Divider />      
-               <Grid className={classes.container}>
-                    {portfList.map((portfItem, key) =>
-                        <Card className={classes.card} key={key}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt={portfItem.imagePreview}
-                            height="140"
-                            image={portfItem.imagePreview}
-                            title={portfItem.nameProyect}
-                            />
-                            <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                {portfItem.nameProyect}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {portfItem.descriptionProyect}
-                            </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                            Live Version
-                            </Button>
-                            <Button size="small" color="primary">
-                            Code
-                            </Button>
-                        </CardActions>
-                        </Card> 
-                    )}
+        <Box component="div" className={classes.mainContainer}>
                
+
+               <Grid container justify="center">
+                    {portfList.map((portfItem, key) =>
+                        <Grid item={true} xs={12} sm={8} md={6} key={key}>
+                            <Card className={classes.cardContainer} >
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        alt={portfItem.nameProyect}
+                                        height="140"
+                                        image={portfItem.imagePreview}
+                                        title={portfItem.nameProyect}
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5">
+                                            {portfItem.nameProyect}
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            {portfItem.descriptionProyect}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions alignSelf="center">
+                                    <Button size="small" color="primary" href={portfItem.btnLive}>
+                                    Live Version
+                                    </Button>
+                                    <Button size="small" color="primary" href={portfItem.btnCode}>
+                                    GitHub
+                                    </Button>
+                                </CardActions>
+                            </Card> 
+                        </Grid>
+                    )}
                </Grid>
-        </Box>
-        </>
+        </Box></>
     )
 }
 export default Portfolio

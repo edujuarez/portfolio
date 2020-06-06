@@ -3,6 +3,7 @@ import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles'
 import Typed from 'react-typed'
 import avatar from '../../images/avatar.png'
+import background from '../../images/background.jpg'
 
 //CSS
 const useStyles = makeStyles (theme => ({
@@ -12,10 +13,10 @@ const useStyles = makeStyles (theme => ({
         margin: theme.spacing(1)
     },
     title: {
-        color: 'purple'
+        color: '#FF33F5'
     },
     subtitle: {
-        color: "lightBlue",
+        color: "white",
         marginBottom:'3rem'
     },
     typedContainer: {
@@ -25,25 +26,36 @@ const useStyles = makeStyles (theme => ({
         transform: "translate(-50%, -50%)",
         width: "100vw",
         textAlign: "center",
-        zIndex: 1
+       
+    },
+    container: {
+        height: '100vh',
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(${background})`,
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        position: "relative",
     }
 }))
 
 const Home = () => {
     const classes = useStyles()
     return(
-    <Box className={classes.typedContainer}>
-        <Grid container justify="center">
-            <Avatar className={classes.avatar} src={avatar} alt="Eduardo Juarez"/> 
-        </Grid>
-        <Typography className={classes.title} variant="h4" >
-            <Typed strings={["Eduardo Juarez"]} typeSpeed={40}/>
-        </Typography>
-        <br />
-        <Typography  className={classes.subtitle} variant="h5">
-            <Typed strings={["React Developer", "Front-End Developer","JavaScript"]} typeSpeed={40} backSpeed={80} loop/>
-        </Typography>
-    </Box>
+        <div className={classes.container}>
+            <Box className={classes.typedContainer}>
+                <Grid container justify="center">
+                    <Avatar className={classes.avatar} src={avatar} alt="Eduardo Juarez"/> 
+                </Grid>
+                <Typography className={classes.title} variant="h4" >
+                    <Typed strings={["Eduardo Juarez"]} typeSpeed={40}/>
+                </Typography>
+                <br />
+                <Typography  className={classes.subtitle} variant="h5">
+                    <Typed strings={["React Developer", "Front-End Developer","JavaScript"]} typeSpeed={40} backSpeed={80} loop/>
+                </Typography>
+            </Box>
+        </div>
+    
 )
 }
 export default Home

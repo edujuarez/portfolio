@@ -5,13 +5,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles'
 import avatar from '../../images/avatar.png'
 import MovilMenu from '@material-ui/core/Drawer'
+import Footer from '../footer/footer'
 
 //css Styles
 const useStyles = makeStyles (theme => ({
     menuSlider: { 
         width: 250,
         background: 'wheet',
-        height: "100%"
+        height: "100%",
     },
     avatar: {
         display: "block",
@@ -39,7 +40,7 @@ const menuList = [
     },
     {
         listIcon: <ContactMail/>,
-        listText: "Contact Me"
+        listText: "Contact"
     },
    
 ]
@@ -74,17 +75,20 @@ const Menu = () => {
     return(
         <>
             <Box component="nav">
-                <AppBar position='static' style={{background: "lightblue"}}>
+                <AppBar style={{background: "lightblue"}}>
                     <Toolbar>
                         <IconButton onClick={toggleSlider("right", true)}>
-                            <MenuIcon style={{color: "purple"}} /> 
+                            <MenuIcon style={{color: "#FF33F5"}} /> 
                         </IconButton>
                         <Typography style= {{color:"black"}} variant='h5'>
                             Eduardo Juarez
                         </Typography>
+                        
                         <MovilMenu anchor="left" open={state.right} onClose={toggleSlider("right", false)}>
                             {sideList("right")}
+                            <Footer/>
                         </MovilMenu>
+                        <Footer/>
                     </Toolbar>
                 </AppBar>
             </Box>
