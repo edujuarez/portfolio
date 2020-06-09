@@ -60,14 +60,12 @@ const useStyles = makeStyles (theme => ({
 const Portfolio = () => {
 const classes = useStyles()
     return (<>               
-    <Typography variant="h4" align="center" margin="25px">Portfolio</Typography>
+    <Typography variant="h3" align="center" margin="25px" padding="25px">Portfolio</Typography>
                <Divider />      
         <Box component="div" className={classes.mainContainer}>
-               
-
                <Grid container justify="center">
                     {portfList.map((portfItem, key) =>
-                        <Grid item={true} xs={12} sm={8} md={6} key={key}>
+                        <Grid item={true} xs={12} md={6} sm={3}  key={key}>
                             <Card className={classes.cardContainer} >
                                 <CardActionArea>
                                     <CardMedia
