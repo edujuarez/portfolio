@@ -26,37 +26,36 @@ const useStyles = makeStyles (theme => ({
             display: "flex",
         }
     }))
+    //       <Typography variant="h4" align="center"> I'm focus in JavaScript like my principal programming language<p>Using React like my default app maker alongside the material ui style sheet and their benefits.</p></Typography>
 const Skills = () => {
     const classes = useStyles()
     return(
         <>
             <Typography variant="h3" align="center" margin="15px" padding="25px" gutterBottom>Skills</Typography>
             <Divider/>
-
-            <Grid container className={classes.container} >
-                <Typography variant="h4" align="center"> I'm focus in JavaScript like my principal programming language<p>Using React like my default app maker alongside the material ui style sheet and their benefits.</p></Typography>
-                <Grid item xs={12} sm={12} md={6} lg={3}>
+                <Grid container className={classes.container} >
+                <Grid item xs={12}  sm={12} md={6} xl={3}>
                     <Grid container justify="center" >
                         <Avatar className={classes.avatar} src={javascriptLogo} alt="JavaScript"/> 
                     </Grid>
                     <Typography variant="h5" align="center">JavaScript</Typography>
                     
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} lg={3}>
+                <Grid item xs={12}  sm={12} md={6} xl={3}>
                     <Grid container justify="center">
                         <Avatar className={classes.avatar} src={reactLogo} alt="React"/> 
                     </Grid>
                     <Typography variant="h5" align="center">React </Typography>
                     <Typography variant="subtitle1"></Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} lg={3}>
+                <Grid item xs={12}  sm={12} md={6} xl={3}>
                     <Grid container justify="center">
                         <Avatar className={classes.avatar} src={htmlLogo} alt="Html"/> 
                     </Grid>
                     <Typography variant="h5" align="center">Html</Typography>
 
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} lg={3}>
+                <Grid item xs={12}  sm={12} md={6} xl={3}>
                     <Grid container justify="center">
                         <Avatar className={classes.avatar} src={cssLogo} alt="Css"/> 
                     </Grid>
