@@ -50,8 +50,8 @@ const useStyles = makeStyles (theme => ({
         
     },
     cardContainer: {
-        maxWidth: 347,
-        margin: "5rem auto",
+        maxWidth: 370,
+        margin: "3rem auto",
 
     },
 }))
