@@ -21,7 +21,6 @@ const useStyles = makeStyles (theme => ({
             width: "80%",
             margin: "0 auto",
             alignContent:"center",
-            alignSelf: "center",
             padding:"15px",
             display: "flex",
             
@@ -57,7 +56,7 @@ const Skills = () => {
             <Divider/>
                 <Grid container className={classes.container} >
                     <Grid>
-                        <Typography variant="h4" align="center" item xs={12}  sm={12} md={12} xl={12}> I'm focus in JavaScript like my principal programming language.<br/>Using React like my default app maker alongside the material ui style sheet and their benefits.</Typography>
+                        <Typography variant="h4" align="center"  xs={12}  sm={12} md={12} xl={12}> I'm focus in JavaScript like my principal programming language.<br/>Using React like my default app maker alongside the material ui style sheet and their benefits.</Typography>
                     </Grid>
                     {skillsList.map ((skillsItem, key) =>
                         <Grid className={classes.item} item xs={12}  sm={12} md={6} xl={3} key={key}>

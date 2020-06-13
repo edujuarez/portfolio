@@ -65,7 +65,7 @@ const classes = useStyles()
         <Box component="div" className={classes.mainContainer}>
                <Grid container justify="center">
                     {portfList.map((portfItem, key) =>
-                        <Grid item={true} xs={12} sm={12} md={6} xl={3} key={key}>
+                        <Grid item xs={12} sm={12} md={6} xl={3} key={key}>
                             <Card className={classes.cardContainer} >
                                 <CardActionArea>
                                     <CardMedia
@@ -84,7 +84,7 @@ const classes = useStyles()
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
-                                <CardActions alignSelf="center">
+                                <CardActions alignself="center">
                                     <Button size="small" color="primary" href={portfItem.btnLive}>
                                     Live Version
                                     </Button>
