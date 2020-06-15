@@ -30,46 +30,17 @@ const Contact = () => {
         <Typography variant="h3" align="center">Contact Me</Typography>
         <Divider/>
         <Grid container className={classes.formContainer} justify="center">
-            <form className={classes.form} noValidate autoComplete="off">
-                <Grid>
-                    <TextField 
-                   id="name"
-                   label="Full Name"
-                   variant="outlined"
-                   fullWidth
-                   required
-                    />
-                </Grid>
-                <Grid>
-                    <TextField 
-                    id="email" 
-                    label="Email"
-                    type="email"
-                    variant="outlined" 
-                    fullWidth
-                    required
-                    />
-                </Grid>
-                <Grid >
-                    <TextField 
-                    id="message" 
-                    label="How can I help you?" 
-                    variant="outlined" 
-                    multiline
-                    rows={4}
-                    fullWidth
-                    required
-                    />    
-                </Grid>
-                <Grid align="right">
-                   <Button 
-                   variant="contained" 
-                   color="primary"
-                   >
-                       Send
-                   </Button>
-                </Grid>
-            </form>            
+            <form>
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeRhWq--bInNMck8fY0T6YrETpqh-dEQIt4Sti8HsKPsrFZjg/viewform?embedded=true" 
+                    width="640" 
+                    height="900" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Cargando…
+                </iframe>
+            </form>      
        
         </Grid>
             

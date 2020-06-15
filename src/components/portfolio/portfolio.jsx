@@ -85,11 +85,19 @@ const classes = useStyles()
                                     </CardContent>
                                 </CardActionArea>
                                 <CardActions alignself="center">
-                                    <Button size="small" color="primary" href={portfItem.btnLive}>
-                                    Live Version
+                                    <Button 
+                                        size="small" 
+                                        color="primary" 
+                                        href={portfItem.btnLive} 
+                                        target="_blank">
+                                         Live Version
                                     </Button>
-                                    <Button size="small" color="primary" href={portfItem.btnCode}>
-                                    GitHub
+                                    <Button 
+                                        size="small" 
+                                        color="primary" 
+                                        href={portfItem.btnCode} 
+                                        target="_blank">
+                                            GitHub
                                     </Button>
                                 </CardActions>
                             </Card> 
