@@ -34,7 +34,7 @@ const Contact = () => {
                 <Grid>
                     <TextField 
                    id="name"
-                   label="Name"
+                   label="Full Name"
                    variant="outlined"
                    fullWidth
                    required
