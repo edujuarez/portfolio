@@ -4,6 +4,7 @@ import javascriptLogo from '../../images/JavaScript-logo.png'
 import reactLogo from '../../images/reactLogo.png'
 import htmlLogo from '../../images/htmlLogo.png'
 import cssLogo from '../../images/css3Logo.jpg'
+import Menu from '../menu/menu'
 
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -53,6 +54,11 @@ const Skills = () => {
     const classes = useStyles()
     return(
         <>
+        <Menu/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>            
             <Typography variant="h3" align="center" margin="15px" padding="25px" gutterBottom>Skills</Typography>
             <Divider/>
                 <Grid container className={classes.container} >

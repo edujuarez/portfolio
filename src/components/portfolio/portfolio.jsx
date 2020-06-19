@@ -6,6 +6,8 @@ import tetrisMiniatura  from '../../images/tetrisMiniatura.png'
 import covidMiniatura  from '../../images/covidMiniatura.png'
 import searchMiniatura  from '../../images/searchMiniatura.png'
 import portfMiniatura  from '../../images/portfMiniatura.png'
+import Menu from '../menu/menu'
+
 
 
 
@@ -59,9 +61,15 @@ const useStyles = makeStyles (theme => ({
 
 const Portfolio = () => {
 const classes = useStyles()
-    return (<>               
-    <Typography variant="h3" align="center" margin="25px" padding="25px">Portfolio</Typography>
-               <Divider />      
+    return (<>
+       <Menu/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>  
+    <div>
+             <Typography variant="h3" align="center" margin="100px" padding="25px">Portfolio</Typography>
+               <Divider />        
         <Box component="div" className={classes.mainContainer}>
                <Grid container justify="center">
                     {portfList.map((portfItem, key) =>
@@ -85,10 +93,20 @@ const classes = useStyles()
                                     </CardContent>
                                 </CardActionArea>
                                 <CardActions alignSelf="center">
-                                    <Button size="small" color="primary" href={portfItem.btnLive}>
+                                    <Button 
+                                        size="small" 
+                                        color="primary" 
+                                        href={portfItem.btnLive}
+                                        target="_blank"
+                                    >
                                     Live Version
                                     </Button>
-                                    <Button size="small" color="primary" href={portfItem.btnCode}>
+                                    <Button 
+                                        size="small" 
+                                        color="primary" 
+                                        href={portfItem.btnCode}
+                                        target="_blank"
+                                    >
                                     GitHub
                                     </Button>
                                 </CardActions>
@@ -96,7 +114,9 @@ const classes = useStyles()
                         </Grid>
                     )}
                </Grid>
-        </Box></>
+        </Box>
+    </div>
+    </>
     )
 }
 export default Portfolio

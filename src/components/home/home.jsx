@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typed from 'react-typed'
 import avatar from '../../images/avatar.png'
 import background from '../../images/background.jpg'
+import Menu from '../menu/menu'
 
 //CSS
 const useStyles = makeStyles (theme => ({
@@ -42,6 +43,7 @@ const Home = () => {
     const classes = useStyles()
     return(
         <div className={classes.container}>
+            <Menu/>
             <Box className={classes.typedContainer}>
                 <Grid container justify="center">
                     <Avatar className={classes.avatar} src={avatar} alt="Eduardo Juarez"/> 

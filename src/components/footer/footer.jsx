@@ -29,12 +29,14 @@ const Footer = () =>{
             style={{padding: 0}}
             icon={<LinkedIn/>}
             href="https://www.linkedin.com/in/eduardo--juarez/"
+            target="_blank"
             />
             <BottomNavigationAction
             classeName={classes.root}
             style={{padding: 0}}
             icon={<GitHub/>}
             href="https://github.com/edujuarez"
+            target="_blank"
             />
            
 
