@@ -28,7 +28,8 @@ const useStyles = makeStyles (theme => ({
 const menuList = [
     {
         listIcon: <Home/>,
-        listText: "Home"
+        listText: "Home",
+        lsPage: "./"
     },
     {
         listIcon: <AssignmentInd/>,
@@ -60,7 +61,7 @@ const Menu = () => {
                 <Divider/>
                 <List>
                     {menuList.map((lsItem, key) =>(
-                        <ListItem button key={key} href="#">
+                        <ListItem button key={key} href={lsPage}>
                             <ListItemIcon className={classes.listItem}>
                                 {lsItem.listIcon}
                             </ListItemIcon>
