@@ -29,7 +29,6 @@ const menuList = [
     {
         listIcon: <Home/>,
         listText: "Home",
-        lsPage: "./"
     },
     {
         listIcon: <AssignmentInd/>,
