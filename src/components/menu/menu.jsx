@@ -60,7 +60,7 @@ const Menu = () => {
                 <Divider/>
                 <List>
                     {menuList.map((lsItem, key) =>(
-                        <ListItem button key={key} href={lsPage}>
+                        <ListItem button key={key}>
                             <ListItemIcon className={classes.listItem}>
                                 {lsItem.listIcon}
                             </ListItemIcon>
